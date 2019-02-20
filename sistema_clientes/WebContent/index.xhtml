@@ -2,7 +2,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
 
-
+<head>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+</head>
 
 <h:head>
 	<title>Sistema de Cadastro</title>
@@ -11,11 +16,19 @@
 <h:body>
 	<h:form>
 		<h2>Menu Principal</h2>
-		<h:commandLink value="Cadastro de Clientes" action="cadcliente?faces-redirect=true"/><br/>
-		<h:commandLink value="Cadastro de Fornecedores" action="cadfornecedor?faces-redirect=true"/><br/>
-		<h:commandLink value="Cadastro de Produtos" action="cadproduto?faces-redirect=true"/><br/>
-		<h:commandLink value="Cadastro de Vendedores" action="cadvendedor?faces-redirect=true"/>
+		<h:commandLink value="Cadastro de Clientes" action="cadcliente?faces-redirect=true"/><br />
+		<h:commandLink value="Cadastro de Fornecedores" action="cadfornecedor?faces-redirect=true"/><br />
+		<h:commandLink value="Cadastro de Produtos" action="cadproduto?faces-redirect=true"/><br />
+		<h:commandLink value="Cadastro de Vendedores" action="cadvendedor?faces-redirect=true"/><br />
+		
 	</h:form>
+		<br />
+		<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Cadastro</a>
+		
+		<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    		<i class="material-icons right">send</i>
+  		</button>
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </h:body>
-
 </html>
