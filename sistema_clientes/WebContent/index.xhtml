@@ -11,25 +11,27 @@
 		<title>Sistema de Cadastro</title>
 	</h:head>
 	
-	<h:body styleClass="materialize-red-text">
+	<h:body style="background-color: lightgreen; margin-top:0px;">
 		<h:form>
-			<h2>Menu Principal</h2>
-			<h:commandLink value="Cadastro de Clientes"
+			<div style="margin-top:0px; padding:5px;" class="card-panel amber lighten-3">
+				<h4 style="padding-left: 10px">Sistema de Cadastros</h4>
+			</div>
+			<h:commandLink value="Cadastro de Clientes" style="padding-left: 10px"
 				action="cadcliente?faces-redirect=true" />
 			<br />
-			<h:commandLink value="Cadastro de Fornecedores"
+			<h:commandLink value="Cadastro de Fornecedores" style="padding-left: 10px"
 				action="cadfornecedor?faces-redirect=true" />
 			<br />
-			<h:commandLink value="Cadastro de Produtos"
+			<h:commandLink value="Cadastro de Produtos" style="padding-left: 10px"
 				action="cadproduto?faces-redirect=true" />
 			<br />
-			<h:commandLink value="Cadastro de Vendedores"
+			<h:commandLink value="Cadastro de Vendedores" style="padding-left: 10px"
 				action="cadvendedor?faces-redirect=true" />
 			<br />
 		</h:form>
 		<br />
 		
-		<button class="btn waves-effect waves-light"  name="action">
+		<button style="margin-left: 10px;" class="btn waves-effect waves-light"  name="action">
 			Cadastro de Clientes <i class="material-icons right">send</i>
 		</button>
 	
