@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:h="http://java.sun.com/jsf/html"
-	  xmlns:c="http://java.sun.com/jsf/core">
-	<h:head>
-		<!--Import Google Icon Font-->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="resources/css/materialize.min.css" media="screen,projection" />
-		<title>Sistema de Cadastro</title>
-	</h:head>
-	
-	<h:body style="background-color: lightgreen; margin-top:0px;">
-		<h:form>
-			<div style="margin-top:0px; padding:5px;" class="card-panel amber lighten-3">
-				<h4 style="padding-left: 10px">Sistema de Cadastros</h4>
-			</div>
-			<h:commandLink value="Cadastro de Clientes" style="padding-left: 10px"
-				action="cadcliente?faces-redirect=true" />
-			<br />
-			<h:commandLink value="Cadastro de Fornecedores" style="padding-left: 10px"
-				action="cadfornecedor?faces-redirect=true" />
-			<br />
-			<h:commandLink value="Cadastro de Produtos" style="padding-left: 10px"
-				action="cadproduto?faces-redirect=true" />
-			<br />
-			<h:commandLink value="Cadastro de Vendedores" style="padding-left: 10px"
-				action="cadvendedor?faces-redirect=true" />
-			<br />
-		</h:form>
-		<br />
-		
-		<button style="margin-left: 10px;" class="btn waves-effect waves-light"  name="action">
-			Cadastro de Clientes <i class="material-icons right">send</i>
-		</button>
-	
-		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src="resources/js/materialize.min.js"></script>
-	</h:body>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsf/core">
+<h:head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet" />
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet"
+		href="resources/css/materialize.min.css" media="screen,projection" />
+	<title>Sistema de Cadastro</title>
+</h:head>
+
+<h:body style="background-color: lightgreen; margin-top:0px;">
+	<h:form>
+		<div style="color: black; margin: 10px; padding: 10px;" class="card-panel amber lighten-3">
+			<h4 style="padding-left: 10px">Sistema de Cadastros </h4>
+		</div>
+		<div>
+			<button style="margin-left: 10px;" class="btn waves-effect waves-light" name="btn_clientes">
+				<h:commandLink value="Cadastro de Clientes" style="padding-left: 10px; color: black"
+					action="cadcliente?faces-redirect=true"/>
+					<i class="material-icons right">send</i>
+			</button>
+			<button style="margin-left: 10px;" class="btn waves-effect waves-light" name="action">
+				<h:commandLink value="Cadastro de Fornecedores" style="padding-left: 10px; color: black"
+					action="cadfornecedor?faces-redirect=true"/>
+					<i class="material-icons right">send</i>
+			</button>
+			<button style="margin-left: 10px;" class="btn waves-effect waves-light" name="action">
+				<h:commandLink value="Cadastro de Produtos" style="padding-left: 10px; color: black"
+					action="cadproduto?faces-redirect=true"/>
+					<i class="material-icons right">send</i>
+			</button>
+			<button style="margin-left: 10px;" class="btn waves-effect waves-light" name="action">
+				<h:commandLink value="Cadastro de Vendedores" style="padding-left: 10px; color: black"
+					action="cadvendedor?faces-redirect=true"/>
+					<i class="material-icons right">send</i>
+			</button>
+		</div>
+	</h:form>
+	<br />
+
+	<!--JavaScript at end of body for optimized loading-->
+	<script type="text/javascript" src="resources/js/materialize.min.js"></script>
+</h:body>
 </html>
