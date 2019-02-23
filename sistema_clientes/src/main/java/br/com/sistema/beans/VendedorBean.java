@@ -19,7 +19,7 @@ public class VendedorBean {
 	private DaoGenerico<Vendedor> daoGenerico = new DaoGenerico<Vendedor>();
 	private List<Vendedor> vendedores = new ArrayList<Vendedor>();
 	
-	private HtmlInputText input;
+	private HtmlInputText inputText;
 			
 	public String salvar(){
 		daoGenerico.salvar(vendedor);
@@ -29,7 +29,7 @@ public class VendedorBean {
 	
 	public String novo() {
 		vendedor = new Vendedor();
-		
+		inputText.setDisabled(true);
 		return "";
 	}
 
@@ -69,12 +69,12 @@ public class VendedorBean {
 		this.daoGenerico = daoGenerico;
 	}
 
-	public HtmlInputText getInput() {
-		return input;
+	public HtmlInputText getInputText() {
+		return inputText;
 	}
 
-	public void setInput(HtmlInputText input) {
-		this.input = input;
+	public void setInputText(HtmlInputText inputText) {
+		this.inputText = inputText;
 	}
 	
 	
