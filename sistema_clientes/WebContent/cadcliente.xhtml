@@ -12,51 +12,52 @@
 	<title>Cadastro de Clientes</title>
 </h:head>
 
-<h:body>
+<h:body style="background-color: lightblue; margin-top:0px">
 	<h:form>
-		<div style="margin:0px; padding:5px;" class="card-panel amber lighten-3">
-			<h4>Cadastro de Clientes</h4>
+		<div style="margin: 10px; padding: 10px" class="card-panel amber lighten-3">
+			<h4 style="padding-left: 10px">Cadastro de Clientes</h4>
 		</div>
-		
-		<h:outputLabel value="Código: " style="padding: 20px"/>
-		<h:inputText id="cp_id" value="#{pessoaBean.pessoa.id}" readonly="true" size="8" style="padding: 20px"/><br/><br/>
-		<h:outputLabel value="Nome: " style="padding: 20px"/>
-		<h:inputText id="cp_nome" value="#{pessoaBean.pessoa.nome}" size="50" style="padding: 20px"/><br/><br/>
-		<h:outputLabel value="Sobrenome: " style="padding: 20px"/>
-		<h:inputText id="cp_sobrenome" value="#{pessoaBean.pessoa.sobrenome}" size="40" style="padding: 20px"/><br/><br/>
-		<h:outputLabel value="Idade: " style="padding: 20px"/>
-		<h:inputText id="cp_idade" value="#{pessoaBean.pessoa.idade}" size="4" style="padding: 20px"/><br/><br/>
-		
-		<h:commandButton value="Novo" action="#{pessoaBean.novo}"/>
-		<h:commandButton value="Salvar" action="#{pessoaBean.salvar}"/>
-		<h:commandButton value="Remover" action="#{pessoaBean.remove}"/>
-		<h:commandButton value="Voltar" action="index?faces-redirect=true"/>
-		<h4>Clientes Cadastrados</h4>
-		<!-- ArrayList de pessoas -->
-		<h:dataTable bgcolor="Silver" value="#{pessoaBean.pessoas}" var="pessoa">
-			<h:column>
-				<h:outputText value="#{pessoa.id}"/>
-			</h:column>
-			<h:column>
-				<h:outputText value="#{pessoa.nome}"/>
-			</h:column>
-			<h:column>
-				<h:outputText value="#{pessoa.sobrenome}"/>
-			</h:column>
-			<h:column>
-				<h:outputText value="#{pessoa.idade}"/>
-			</h:column>
-			<h:column>
-				<h:commandLink value="Editar">
-					<f:setPropertyActionListener value="#{pessoa}" target="#{pessoaBean.pessoa}"/>
-				</h:commandLink>
-			</h:column>
-			<h:column>
-				<h:commandLink value="Excluir" action="#{pessoaBean.remove}">
-					<f:setPropertyActionListener value="#{pessoa}" target="#{pessoaBean.pessoa}"/>
-				</h:commandLink>
-			</h:column>
-		</h:dataTable>		
+		<div style="margin: 30px; padding: 30px">
+			<h:outputLabel value="Código: " size="10"/>
+			<h:inputText id="cp_id" value="#{pessoaBean.pessoa.id}" readonly="true" size="8"/><br/><br/>
+			<h:outputLabel value="Nome: " size="10"/>
+			<h:inputText id="cp_nome" value="#{pessoaBean.pessoa.nome}" size="50"/><br/><br/>
+			<h:outputLabel value="Sobrenome: " size="10"/>
+			<h:inputText id="cp_sobrenome" value="#{pessoaBean.pessoa.sobrenome}" size="40"/><br/><br/>
+			<h:outputLabel value="Idade: " size="10"/>
+			<h:inputText id="cp_idade" value="#{pessoaBean.pessoa.idade}" size="4"/><br/><br/>
+			
+			<h:commandButton value="Novo" action="#{pessoaBean.novo}"/>
+			<h:commandButton value="Salvar" action="#{pessoaBean.salvar}"/>
+			<h:commandButton value="Remover" action="#{pessoaBean.remove}"/>
+			<h:commandButton value="Voltar" action="index?faces-redirect=true"/>
+			<h4>Clientes Cadastrados</h4>
+			<!-- ArrayList de pessoas -->
+			<h:dataTable bgcolor="Silver" value="#{pessoaBean.pessoas}" var="pessoa">
+				<h:column>
+					<h:outputText value="#{pessoa.id}"/>
+				</h:column>
+				<h:column>
+					<h:outputText value="#{pessoa.nome}"/>
+				</h:column>
+				<h:column>
+					<h:outputText value="#{pessoa.sobrenome}"/>
+				</h:column>
+				<h:column>
+					<h:outputText value="#{pessoa.idade}"/>
+				</h:column>
+				<h:column>
+					<h:commandLink value="Editar">
+						<f:setPropertyActionListener value="#{pessoa}" target="#{pessoaBean.pessoa}"/>
+					</h:commandLink>
+				</h:column>
+				<h:column>
+					<h:commandLink value="Excluir" action="#{pessoaBean.remove}">
+						<f:setPropertyActionListener value="#{pessoa}" target="#{pessoaBean.pessoa}"/>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+		</div>		
 	</h:form>
 	<!--JavaScript at end of body for optimized loading-->
 	<script type="text/javascript" src="resources/js/materialize.min.js"></script>

@@ -6,8 +6,6 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.component.html.HtmlInputText;
-
 import br.com.sistema.dao.DaoGenerico;
 import br.com.sistema.entidades.Vendedor;
 
@@ -18,8 +16,6 @@ public class VendedorBean {
 	private Vendedor vendedor = new Vendedor();
 	private DaoGenerico<Vendedor> daoGenerico = new DaoGenerico<Vendedor>();
 	private List<Vendedor> vendedores = new ArrayList<Vendedor>();
-	
-	private HtmlInputText inputText;
 			
 	public String salvar(){
 		daoGenerico.salvar(vendedor);
@@ -29,7 +25,6 @@ public class VendedorBean {
 	
 	public String novo() {
 		vendedor = new Vendedor();
-		inputText.setDisabled(true);
 		return "";
 	}
 
@@ -69,15 +64,6 @@ public class VendedorBean {
 		this.daoGenerico = daoGenerico;
 	}
 
-	public HtmlInputText getInputText() {
-		return inputText;
-	}
-
-	public void setInputText(HtmlInputText inputText) {
-		this.inputText = inputText;
-	}
-	
-	
 	
 
 }
